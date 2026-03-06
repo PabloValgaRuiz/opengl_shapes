@@ -361,3 +361,17 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# ============================================================
+# CUSTOM OPENGL PROJECT OVERRIDES
+# ============================================================
+
+# 1. Allow the Dependencies folder even if it contains .lib or .dll files
+!dependencies/
+!dependencies/**
+
+# 2. Specifically un-ignore compiled formats ONLY inside Dependencies
+!dependencies/**/*.lib
+!dependencies/**/*.dll
+!dependencies/**/*.h
+!dependencies/**/*.hpp
